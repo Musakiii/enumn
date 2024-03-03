@@ -20,6 +20,8 @@ enum SimpleEnum {
 fn test_simple() {
     assert_eq!(SimpleEnum::n(0), Some(SimpleEnum::Case0));
     assert_eq!(SimpleEnum::n(1), Some(SimpleEnum::Case1));
+    assert_eq!(SimpleEnum::n(2), Some(SimpleEnum::Case2));
+    assert_eq!(SimpleEnum::n(3), Some(SimpleEnum::Case3));
     assert_eq!(SimpleEnum::n(4), None);
     assert_eq!(SimpleEnum::n(-1), None);
 }
@@ -41,6 +43,7 @@ enum EnumWithDiscriminant {
     A = 10,
     B, // implicitly 11
     C = -80,
+    D = 40
 }
 
 #[test]
